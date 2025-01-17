@@ -63,6 +63,7 @@ body {
     font-family: 'Pretendard-Semibold', Arial, sans-serif;
     font-size: 2.1vw;
     padding-bottom: 3vh;
+    padding-left: 10vw;
     color: #3D405B;
 }
 .studuler-name2 {
@@ -76,6 +77,7 @@ body {
 .home-p {
     font-size: 1.5vw;
     padding-bottom: 3vh;
+    padding-left: 10vw;
     color: #3D405B;
 }
 
@@ -160,7 +162,7 @@ h1, h2, h3 {
 
 .phone-image {
     position: absolute;
-    right: 20vw; /* Position the image on the right */
+    right: 18vw; /* Position the image on the right */
     top: 20vh; /* Align the image vertically with the center of the section */
     transform: translateY(-50%); /* Adjust so the image is centered vertically */
     z-index: 1; /* Ensures the image appears over the section */
@@ -168,7 +170,7 @@ h1, h2, h3 {
 
 /* Make sure the image is responsive and phone-sized */
 .phone-image img {
-    width: 18vw; /* Adjust to the size of the phone image */
+    width: 22vw; /* Adjust to the size of the phone image */
     height: auto;
 }
 
@@ -262,11 +264,23 @@ h1, h2, h3 {
     margin: 1vw;
 }
 
+.feature2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 1vw;
+}
+
 .feature:nth-child(even) {
     flex-direction: row-reverse;
 }
 
 .feature-image {
+    flex: 1;
+    margin-bottom: 15vh;
+}
+
+.feature-image2 {
     flex: 1;
     margin-bottom: 15vh;
 }
@@ -283,6 +297,11 @@ h1, h2, h3 {
     max-width: 60%;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature2 img {
+    max-width: 60%;
+    border-radius: 10px;
 }
 
 .feature-video {
@@ -452,7 +471,7 @@ h1, h2, h3 {
     display: grid;
     width: 70vw;
     height: auto;
-    gap: 1rem;
+    gap: 2rem;
     margin-top: 2rem;
 }
 
@@ -469,8 +488,18 @@ h1, h2, h3 {
 }
 
 .goal-icon img {
-    width: 80px;  /* Adjust icon size */
-    height: auto;
+    max-height: 60px;
+    width: auto;  /* Adjust icon size */
+}
+
+.goal-icon2 img {
+    max-height: 40px;
+    width: auto;  /* Adjust icon size */
+}
+
+.goal-icon3 img {
+    max-height: 50px;
+    width: auto;  /* Adjust icon size */
 }
 
 [data-aos="fade-up"] {
@@ -520,10 +549,11 @@ h1, h2, h3 {
     justify-content: center;
     gap: 1rem; /* Add spacing between the icons */
     margin-top: 1rem;
+    padding-left: 8vw;
 }
 
 .store-link img {
-    width: 150px; /* Adjust the size of the icons */
+    width: 11vw; /* Adjust the size of the icons */
     cursor: pointer;
     transition: transform 0.3s;
 }
@@ -588,3 +618,6 @@ h1, h2, h3 {
     background-color: #4c5b64; /* Slightly darker color when clicking */
 }
 
+#goals h3 {
+    margin-bottom: 1vh;
+}
