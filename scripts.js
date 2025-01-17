@@ -7,31 +7,59 @@ AOS.init({
 // Slider functionality
 const slides = document.querySelectorAll('.slide');
 const navButtons = document.querySelectorAll('.slider-nav button');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
 let currentSlide = 0;
+let autoSlideInterval;
 
 function showSlide(index) {
+    currentSlide = (index + slides.length) % slides.length;
     slides.forEach(slide => slide.classList.remove('active'));
     navButtons.forEach(button => button.classList.remove('active'));
 
-    slides[index].classList.add('active');
-    navButtons[index].classList.add('active');
+    slides[currentSlide].classList.add('active');
+    navButtons[currentSlide].classList.add('active');
 }
 
 function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
+    showSlide(currentSlide + 1);
 }
 
-// Auto-advance slides every 5 seconds
-setInterval(nextSlide, 1600);
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
 
-// Click handlers for navigation buttons
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 1600);
+}
+
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+// Attach event listeners
 navButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
-        currentSlide = index;
-        showSlide(currentSlide);
+        showSlide(index);
+        stopAutoSlide(); // Stop auto-slide after manual interaction
+        startAutoSlide(); // Restart auto-slide
     });
 });
+
+prevBtn.addEventListener('click', () => {
+    prevSlide();
+    stopAutoSlide(); // Stop auto-slide after manual interaction
+    startAutoSlide(); // Restart auto-slide
+});
+
+nextBtn.addEventListener('click', () => {
+    nextSlide();
+    stopAutoSlide(); // Stop auto-slide after manual interaction
+    startAutoSlide(); // Restart auto-slide
+});
+
+// Start auto-sliding initially
+startAutoSlide();
 
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
