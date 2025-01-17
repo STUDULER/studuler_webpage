@@ -294,6 +294,13 @@ h1, h2, h3 {
     margin-bottom: 20vh;
 }
 
+#tech h3 {
+    color: #FDF6EC;
+    padding-top: 3vh;
+    padding-bottom: -3vh;
+    text-align: left;
+}
+
 .tech-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -332,13 +339,6 @@ h1, h2, h3 {
     top: 0.55rem;  /* Move the title slightly outside */
     left: -4.85rem;  /* Adjust left positioning for each title */
     padding: 0 1rem;
-}
-
-.tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1rem;
-    text-align: center;
 }
 
 .tools-grid {
