@@ -8,6 +8,7 @@
     <title>나만의 과외 일정 매니저, STUDULER</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -26,8 +27,8 @@
 
     <section id="home">
         <div class="container-home" data-aos="fade-up">
-            <h1>나만의 과외 일정 매니저, STUDULER</h1>
-            <p>과외 일정 관리부터 수업 관리, 피드백, 정산까지.</p>
+            <h1 class="studuler-name">나만의 과외 일정 매니저, <span class="studuler-name2">STUDULER</span></h1>
+            <p><span class="home-p">과외 일정 관리부터 수업 관리, 피드백, 정산까지.</span></p>
             <div class="app-links">
                 <a href="#goals" class="store-link">
                     <img src="./img/appstore.png" alt="App Store" />
@@ -51,7 +52,7 @@
                     <h3>홍바다</h3>
                     <p>기획, 디자인, 웹페이지, Backend 개발</p>
                     <div class="github-button">
-                        <a href="https://github.com/BadaHong" target="_blank" class="btn-github">  방문하기</a>
+                        <a href="https://github.com/BadaHong" target="_blank" class="btn-github"> 방문하기</a>
                     </div>
                 </div>
                 <div class="team-member" data-aos="fade-up" data-aos-delay="200">
@@ -59,7 +60,7 @@
                     <h3>정다영</h3>
                     <p>기획, Frontend 개발</p>
                     <div class="github-button">
-                        <a href="https://github.com/Dayoung331" target="_blank" class="btn-github">  방문하기</a>
+                        <a href="https://github.com/Dayoung331" target="_blank" class="btn-github"> 방문하기</a>
                     </div>
                 </div>
                 <div class="team-member" data-aos="fade-up" data-aos-delay="300">
@@ -67,7 +68,7 @@
                     <h3>김민우</h3>
                     <p>Frontend 개발</p>
                     <div class="github-button">
-                        <a href="https://github.com/philosophy-engineer" target="_blank" class="btn-github">  방문하기</a>
+                        <a href="https://github.com/philosophy-engineer" target="_blank" class="btn-github"> 방문하기</a>
                     </div>
                 </div>
             </div>
@@ -93,42 +94,29 @@
             <h2 data-aos="fade-up">주요 기능 및 화면</h2>
 
             <div class="slider" data-aos="fade-up">
-                <div class="slider-nav">
-                    <button class="active"></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                </div>
                 <div class="slide active">
                     <img src="./img/st1.png" alt="App Screenshot 1">
+                    <img src="./img/st5.png" alt="App Screenshot 2">
                 </div>
                 <div class="slide">
-                    <img src="./img/st2.png" alt="App Screenshot 2">
-                </div>
-                <div class="slide">
-                    <img src="./img/st3.png" alt="App Screenshot 3">
-                </div>
-                <div class="slide">
-                    <img src="./img/st4.png" alt="App Screenshot 3">
-                </div>
-                <div class="slide">
-                    <img src="./img/st5.png" alt="App Screenshot 3">
-                </div>
-                <div class="slide">
+                    <img src="./img/st2.png" alt="App Screenshot 3">
                     <img src="./img/st6.png" alt="App Screenshot 3">
                 </div>
                 <div class="slide">
+                    <img src="./img/st3.png" alt="App Screenshot 3">
                     <img src="./img/st7.png" alt="App Screenshot 3">
                 </div>
                 <div class="slide">
+                    <img src="./img/st4.png" alt="App Screenshot 3">
                     <img src="./img/st8.png" alt="App Screenshot 3">
                 </div>
-
             </div>
+            <div class="slider-nav">
+                <button class="active"></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>        
 
             <div class="feature" data-aos="fade-right">
                 <div class="feature-image">
@@ -140,8 +128,10 @@
                 <div class="feature-content">
                     <h3>홈 화면</h3>
                     <p><strong>모든 과외 수업을 한눈에!</strong> </p>
-                    <p>각 수업에 대한 정보를 <strong>카드 형식</strong>으로 만나볼 수 있습니다. 해당 회차의 수업 횟수를 생동감있는 애니메이션으로 구현하였습니다. </p>
-                    <p>수업 추가 및 삭제 할 수 있으며, 각 수업의 정보를 수정할 수 있고, <strong>미작성 피드백</strong>을 편리하게 작성할 수 있습니다.</p>
+                    <p class="feature-p">각 수업에 대한 정보를 <strong>카드 형식</strong>으로 만나볼 수 있습니다. 해당 회차의 수업 횟수를 생동감있는 애니메이션으로
+                        구현하였습니다. </p>
+                    <p class="feature-p">수업 추가 및 삭제 할 수 있으며, 각 수업의 정보를 수정할 수 있고, <strong>미작성 피드백</strong>을 편리하게 작성할 수
+                        있습니다.</p>
                 </div>
             </div>
 
@@ -154,8 +144,8 @@
                 </div>
                 <div class="feature-content">
                     <h3>전체 수업 캘린더</h3>
-                    <p><strong>모든 수업</strong>의 일정을 <strong>하나의 달력</strong>에서 만나볼 수 있습니다! </p>
-                    <p>날짜마다 어떤 수업이 있는지, 피드백 작성 현황을 확인해보세요. </p>
+                    <p class="feature-p"><strong>모든 수업</strong>의 일정을 <strong>하나의 달력</strong>에서 만나볼 수 있습니다! </p>
+                    <p class="feature-p">날짜마다 어떤 수업이 있는지, 피드백 작성 현황을 확인해보세요. </p>
                 </div>
             </div>
 
@@ -168,7 +158,7 @@
                 </div>
                 <div class="feature-content">
                     <h3>수업별 캘린더</h3>
-                    <p>각 수업의 일정을 조정하고, 수업날에는 <strong>피드백</strong>을 만나볼 수 있습니다! </p>
+                    <p class="feature-p">각 수업의 일정을 조정하고, 수업날에는 <strong>피드백</strong>을 만나볼 수 있습니다! </p>
                 </div>
             </div>
 
@@ -184,8 +174,8 @@
                 </div>
                 <div class="feature-content">
                     <h3>정산 화면</h3>
-                    <p>학부모에게 <strong>정산 알림</strong>을 보내 불편함 없이 원활한 의사소통을 경험해보세요. </p>
-                    <p><strong>카카오페이 송금</strong>으로 편리함을 느낄 수 있습니다. </p>
+                    <p class="feature-p">학부모에게 <strong>정산 알림</strong>을 보내 불편함 없이 원활한 의사소통을 경험해보세요. </p>
+                    <p class="feature-p"><strong>카카오페이 송금</strong>으로 편리함을 느낄 수 있습니다. </p>
                 </div>
             </div>
 
@@ -195,8 +185,20 @@
                 </div>
                 <div class="feature-content">
                     <h3>자동 서비스</h3>
-                    <p>수업날짜 자동 생성을 통해 <strong>나만의 과외 일정</strong>을 경험해보세요. </p>
-                    <p><strong>정산날짜 자동 계산기</strong>를 통해 정산날에 전송되는 <strong>자동 알림 서비스</strong>를 만나보세요. </p>
+                    <p class="feature-p">수업날짜 자동 생성을 통해 <strong>나만의 과외 일정</strong>을 경험해보세요. </p>
+                    <p class="feature-p"><strong>정산날짜 자동 계산기</strong>를 통해 정산날에 전송되는 <strong>자동 푸쉬 알림 서비스</strong>를 만나보세요.
+                    </p>
+                </div>
+            </div>
+
+            <div class="feature" data-aos="fade-right">
+                <div class="feature-image">
+                    <img src="/api/placeholder/600/400" alt="Feature 1">
+                </div>
+                <div class="feature-content">
+                    <h3>안전성 보장</h3>
+                    <p class="feature-p">서버와의 통신에서 <strong>JWT 토큰</strong>을 사용하여 개인정보에 민감한 부분들을 보호해줍니다. </p>
+                    <p class="feature-p">더불어 서버 내에서 <strong>비밀번호 암호화</strong>를 하여 더욱 안전한 서비스를 제공합니다. </p>
                 </div>
             </div>
 
